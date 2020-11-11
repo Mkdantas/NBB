@@ -7,11 +7,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-tabs style="margin-top: 15%;">
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="new-games">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Próximos Jogos</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="results">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Últimos Resultados</ion-label>
+      </ion-tab-button>
+  
+    </ion-tab-bar>
+  </ion-tabs>
+
+
 </ion-content>

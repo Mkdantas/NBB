@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <h2>{{ postView.title.rendered }}</h2>
+    <div>{{ postView.date }}</div>
+    <ion-note [(innerHTML)]="postView.content.rendered"></ion-note>
+  </div>
+
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-slides pager="true" paginationType="bullets" >
+  <ion-slide *ngFor="let event of events | slice:0:5; let i=index">
+
+      <ion-card>
+        <ion-card-content>
+          <ion-card-title>{{event.title.rendered}}</ion-card-title>
+
+          
+          <ion-grid size="sx">
+
+            <ion-row>
+            
+              <ion-col size="3">
+                <div>{{ event.teams[0] }}</div>
+              </ion-col>
+
+              <ion-col size="6">
+                <ion-row>
+                  <div>NBB</div>
+                </ion-row>
+                <ion-row>
+                  <div>{{ event.date_gmt | date:"dd '/' MM" }}</div>
+                </ion-row>
+                <ion-row>
+                  <div>{{ event.date_gmt | date:"HH:mm" }}</div>
+                </ion-row>
+                <ion-row>
+                  <div>local do jogo {{ event.veneus }} </div>
+                </ion-row>
+              </ion-col>
+
+              <ion-col size="3">
+                <div>{{ event.teams[1] }}</div>
+              </ion-col>
+
+            </ion-row>
+
+          </ion-grid>
+        
+        <div></div>
+        
+        <div>{{ event.main_results[0] }}</div>
+        </ion-card-content>
+      </ion-card>
+  </ion-slide>
+</ion-slides>

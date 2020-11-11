@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Teams</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let team of teams">
+    
+      <ion-item>{{team.title.rendered}}{{ team.featured_media.view }}</ion-item>
+     
+    
+  </ion-list>
+</ion-content>
