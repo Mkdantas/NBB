@@ -27,17 +27,35 @@ export class ResultsPage implements OnInit {
   ngOnInit() {
   }
 
-  getEvents(){
-    this.api.get('sportspress/v2/events').subscribe((data) =>{
-      this.events = data;
-    })
-  }
+  // getEvents(){
+  //   this.api.get('sportspress/v2/events').subscribe((data) =>{
+  //     this.events = data;
+  //   })
+  // }
 
-  getTeste(){
+  getEvents(){
     this.api.get('sportspress/v2/events').subscribe((events) =>{
       let x = events;
+      x.forEach(game =>{
 
-      console.log(x)
+        this.api.get(`sportspress/v2/teams/${game.teams[0]}`).subscribe((team) => {
+          console.log(team.featured_media);
+  
+          this.api.get(`wp/v2/media/${team.featured_media}`).subscribe((teamPhoto) =>{
+          game.teamHome = teamPhoto.media_details.sizes.full.source_url;
+          
+          })
+        })  
+        this.api.get(`sportspress/v2/teams/${game.teams[1]}`).subscribe((team) => {
+          console.log(team.featured_media);
+  
+          this.api.get(`wp/v2/media/${team.featured_media}`).subscribe((teamPhoto) =>{
+          game.teamVisitor = teamPhoto.media_details.sizes.full.source_url;
+          
+        })
+      })
+      this.events = x;
+      })
     })
   }
 
