@@ -1,0 +1,33 @@
+ion-content{
+    --background: #f1f1f1;
+}
+
+ion-list-header{
+    --background: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 5%;
+}
+
+ion-toolbar{
+    --background: #030032;
+}
+
+.logo{
+    width: 10%;
+    height: auto;
+    margin: 2%;
+}
+
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 2%;
+    line-height: 100%;
+    color: antiquewhite;
+}
+
+.icons{
+    align-items: flex-end;
+}

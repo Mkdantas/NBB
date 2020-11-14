@@ -1,16 +1,10 @@
 
- <ion-slides pager="true" paginationType="bullets" >
+ <ion-slides pager="true" paginationType="bullets" class="card" pager="true" [options]="slideOpts">
     <ion-slide *ngFor="let item of items | slice:0:5; let i=index">
       <ion-card>
-        <img style="width: auto; height: 160px;" src="{{item._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}}" />
+        <img class="img" src="{{item._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}}" />
         <ion-card-content>
-          <h1>{{item.title.rendered}}</h1>
-            <ion-row>
-
-              <img class="avatar" src="{{item._embedded['author'][0].avatar_urls['24']}}" /> 
-              <div>&nbsp;{{item._embedded['author'][0].name}}</div>
-
-            </ion-row>
+          <div class="titulo">{{item.title.rendered}}</div>
       </ion-card-content>
       </ion-card>
     </ion-slide>

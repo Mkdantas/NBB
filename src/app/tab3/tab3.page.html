@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      <div class="text"><img class="logo" src="../../assets/img/BrasilBasquete_logo_100px.png" />Basquete Brasil</div>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -23,7 +23,7 @@
 
   <ion-infinite-scroll threshold="100px" (ionInfinite)="getPosts($event)">
     <ion-infinite-scroll-content
-      loadingSpinner="bubbles"
+      loadingSpinner="lines"
       loadingText="Carregando mais...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>

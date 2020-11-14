@@ -11,6 +11,7 @@ export class DetailPage implements OnInit {
 
   id:any;
   postView:any;
+  postViewImage:any;
 
   constructor(private storage:Storage, private api:APIService) { }
 
@@ -19,6 +20,7 @@ export class DetailPage implements OnInit {
       console.log('ID' + this.id);
       this.getData(id);
     });
+    
   }
 
   async getData(id){
@@ -31,6 +33,10 @@ export class DetailPage implements OnInit {
     });
     }
     
-  
+    async getImage(){
+      this.api.get('wp/v2/media').subscribe((data) =>{
+        this.postViewImage = data
+      });
+    }
 
 }

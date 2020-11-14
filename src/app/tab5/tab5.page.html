@@ -1,11 +1,55 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>tab5</ion-title>
+    <ion-title>
+      <div class="text"><img class="logo" src="../../assets/img/BrasilBasquete_logo_100px.png" />Basquete Brasil</div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item [routerLink]="['/','teams']">
-    <div>Equipes </div>
+
+  <ion-list>
+      <ion-list-header>MAIS NBB</ion-list-header>
+    <ion-item [routerLink]="['/','teams']">
+      <ion-label>Equipes</ion-label><ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>Jogadores</ion-label><ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>Horários de Transmissão</ion-label><ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-list-header>SOBRE NÓS</ion-list-header>
+    <ion-item>
+      <ion-label>Quem somos</ion-label><ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mais aplicativos</ion-label><ion-icon slot="end" name="logo-google-playstore"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>Termos de Uso</ion-label><ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>Politica de Privacidade</ion-label><ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sobre o Aplicativo</ion-label><ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>EXPLORE O NBB</ion-list-header>
+  <ion-item>
+    <ion-label>Site Oficial</ion-label><ion-icon slot="end" name="exit-outline"></ion-icon>
   </ion-item>
+  <ion-item>
+    <ion-label>You Tube</ion-label><ion-icon slot="end" name="logo-youtube"></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-label>Podcast</ion-label><ion-icon slot="end" name="mic-outline"></ion-icon>
+  </ion-item>
+</ion-list>
 </ion-content>

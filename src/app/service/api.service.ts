@@ -10,6 +10,8 @@ const httpHeader = {
 
 const apiUrl = 'http://app.brasilbasquete.com.br/wp-json/wp/v2/posts';
 
+const apiUrlMedia = 'https://app.brasilbasquete.com.br/wp-json/wp/v2/media';
+
 
 
 @Injectable({providedIn: 'root'})
@@ -61,6 +63,13 @@ export class APIService {
 
   getAPIDataByID(id): Observable<any> {
     return this.http.get(apiUrl + '/' + id, httpHeader).pipe(map(this.dataExtract),
+    catchError(this.errorHandle));
+    
+  
+  }
+
+  getAPIDataByIDMedia(id): Observable<any> {
+    return this.http.get(apiUrlMedia + '/' + id, httpHeader).pipe(map(this.dataExtract),
     catchError(this.errorHandle));
   }
 

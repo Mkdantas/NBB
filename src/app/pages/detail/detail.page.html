@@ -1,14 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>detail</ion-title>
+    <ion-title>
+      <div class="text"><img class="logo" src="../../assets/img/BrasilBasquete_logo_100px.png" />Basquete Brasil</div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div>
+    
     <h2>{{ postView.title.rendered }}</h2>
-    <div>{{ postView.date }}</div>
-    <ion-note [(innerHTML)]="postView.content.rendered"></ion-note>
+   <!-- <ion-row>
+          
+      <img class="avatar" src="{{postView._embedded['author'][0].avatar_urls['24']}}" /> 
+      <div>&nbsp;{{postView._embedded['author'][0].name}}</div>
+
+    </ion-row>  -->
+    <div><img src="{{postView._links['wp:featuredmedia'][0].href.link }}"/> </div> 
+    <div>{{ postView.date_gmt | date:"dd '/' MM" }}</div>
+    <ion-note class="content" [(innerHTML)]="postView.content.rendered"></ion-note>
   </div>
 
 </ion-content>
