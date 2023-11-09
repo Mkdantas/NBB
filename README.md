@@ -1,5 +1,8 @@
 # NBB - Basketball App
 
+![Project image](https://i.ibb.co/X5bk4zJ/Whats-App-Image-2023-11-08-at-21-52-29-8875d5b1.jpg)
+
+
 Technologies Used: TypeScript, React Native, Firebase, Node.js
 
 NBB is a comprehensive basketball app designed using a stack of modern technologies such as TypeScript, React Native, Firebase, and Node.js. The app provides users with up-to-date information about basketball matches, scores, relevant blog posts, and detailed team information. It offers the following key features:
